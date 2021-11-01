@@ -1,7 +1,7 @@
-function PriceTag({ price = 0, crossed = false, className, ...props }) {
-  const color = `text-neutral-${crossed ? 200 : 400}`;
-  const size = `text-${crossed ? "base" : "3xl"}`;
-  const styles = `font-bold ${color} ${size} ${crossed && "line-through"}`;
+function PriceTag({ price = 0, crossedOut = false, className, ...props }) {
+  const color = `text-neutral-${crossedOut ? 200 : 400}`;
+  const size = `text-${crossedOut ? "base" : "3xl"}`;
+  const styles = `font-bold ${color} ${size} ${crossedOut && "line-through"}`;
 
   return (
     <p {...props} className={styles + " " + className}>
