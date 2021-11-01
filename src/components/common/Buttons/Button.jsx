@@ -9,9 +9,9 @@ function Button({ className, children, RightIcon, LeftIcon, ...props }) {
 
   return (
     <button {...props} className={`${styles} ${className}`}>
-      {RightIcon}
-      {children}
       {LeftIcon}
+      {children}
+      {RightIcon}
     </button>
   );
 }
