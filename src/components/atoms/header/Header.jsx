@@ -1,6 +1,6 @@
-function Header({ children, ...props }) {
+function Header({ children, className, ...props }) {
   return (
-    <h1 {...props} className="font-bold text-3xl text-neutral-400 leading-8 mb-4">
+    <h1 {...props} className={"font-bold text-3xl text-neutral-400 leading-8 " + className}>
       {children}
     </h1>
   );

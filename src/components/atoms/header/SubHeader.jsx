@@ -1,6 +1,6 @@
-function SubHeader({ children, ...props }) {
+function SubHeader({ children, className, ...props }) {
   return (
-    <h2 {...props} className="font-bold tracking-widest text-xs uppercase text-primary-200 mb-3">
+    <h2 {...props} className={"font-bold tracking-widest text-xs uppercase text-primary-200 " + className}>
       {children}
     </h2>
   );
