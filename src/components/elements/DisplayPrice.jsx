@@ -12,7 +12,7 @@ function DisplayPrice({ price, discount, className, ...props }) {
   return (
     <FlexCenter {...props} className={"justify-between lg:flex-col lg:items-start " + className}>
       {discount && (
-        <FlexCenter className="lg:mb-4">
+        <FlexCenter className="lg:mb-1">
           <PriceTag price={discountedPrice} className="mr-4" />
           <Badge text={disPercentage} />
         </FlexCenter>
