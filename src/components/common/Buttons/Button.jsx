@@ -1,14 +1,14 @@
 function Button({ className, children, RightIcon, LeftIcon, ...props }) {
   const textStyles = "bg-primary-200 font-bold text-white";
-  const containerStyles = "rounded-lg w-full shadow-xl py-4";
-  const hoverStyles = "";
+  const containerStyles = "rounded-lg shadow-xl py-4 px-8";
   const flexStyles = "flex justify-center items-center";
+  const stateStyles = "hover:opacity-80 disabled:opacity-50 active:translate-y-1 transform";
+  const transitionStyle = "transition-all duration-250 ease-in-out";
+
+  const styles = `${textStyles} ${stateStyles} ${containerStyles} ${transitionStyle} ${flexStyles}`;
 
   return (
-    <button
-      {...props}
-      className={`${textStyles} ${hoverStyles} filter hover:brightness-150 hover:filter brightness-100 ${containerStyles} ${flexStyles} ${className}`}
-    >
+    <button {...props} className={`${styles} ${className}`}>
       {RightIcon}
       {children}
       {LeftIcon}
