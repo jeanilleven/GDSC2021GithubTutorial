@@ -32,7 +32,11 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      filter: ["hover", "focus"],
+      opacity: ["disabled"],
+      translate: ["active"],
+    },
   },
   plugins: [],
 };
