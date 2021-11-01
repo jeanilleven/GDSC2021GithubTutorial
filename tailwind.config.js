@@ -4,6 +4,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+			fontFamily: {
+				display: ["'Kumbh Sans'", "sans-serif"], 
+			},
 			colors: {
 				primary: {
 					200: "hsl(26, 100%, 55%)",
@@ -17,7 +20,6 @@ module.exports = {
 				},
 				white: "hsl(0, 0%, 100%)",
 				dark: "hsl(0, 0%, 0%)",
-
 			}
 		},
   },
