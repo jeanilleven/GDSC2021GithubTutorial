@@ -4,9 +4,9 @@ function PriceTag({ price = 0, crossedOut = false, className, ...props }) {
   const styles = `font-bold ${color} ${size} ${crossedOut && "line-through"}`;
 
   return (
-    <p {...props} className={styles + " " + className}>
+    <span {...props} className={styles + " " + className}>
       {"$" + price.toFixed(2).toString()}
-    </p>
+    </span>
   );
 }
 
