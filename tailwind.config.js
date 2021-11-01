@@ -4,6 +4,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+			fontWeight: {
+				normal: 400,
+				bold: 700
+			},
 			fontFamily: {
 				display: ["'Kumbh Sans'", "sans-serif"], 
 			},
