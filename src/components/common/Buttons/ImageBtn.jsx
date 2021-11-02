@@ -7,7 +7,7 @@ function ImageBtn({ name, className, src, isSelected = false, ...props }) {
 
   return (
     <Btn {...props} name={name} className={styles + " " + className}>
-      <Image src={src} alt={name} className={isSelected ? "opacity-50" : ""} />
+      <Image src={src} alt={name} className={isSelected ? "opacity-70" : ""} />
     </Btn>
   );
 }
