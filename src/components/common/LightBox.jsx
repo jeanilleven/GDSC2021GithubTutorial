@@ -8,9 +8,9 @@ function LightBox({ children, className, isOpen, ...props }) {
   const styles = `${baseStyles} ${isOpen ? openStyles : hiddenStyles} ${transitionStyles}`;
 
   return (
-    <div {...props} id="lightbox" className={styles + " " + className}>
+    <section {...props} id="lightbox" className={styles + " " + className}>
       {children}
-    </div>
+    </section>
   );
 }
 
