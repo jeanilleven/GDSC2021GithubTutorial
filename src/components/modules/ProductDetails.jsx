@@ -1,12 +1,14 @@
 import Text from "../common/Text";
 import { Header, SubHeader } from "./../common/Headers";
+import Price from "./Price";
 
-function ProductDetails({ name, company, description, ...props }) {
+function ProductDetails({ name, company, description, price, discount, ...props }) {
   return (
     <article {...props}>
-      {company && <SubHeader className="mb-3 lg:mb-4">{company}</SubHeader>}
-      {name && <Header className="mb-4 lg:mb-9">{name}</Header>}
-      {description && <Text>{description}</Text>}
+      {company && <SubHeader>{company}</SubHeader>}
+      {name && <Header className="mt-3 lg:mt-4">{name}</Header>}
+      {description && <Text className="mt-4 lg:mt-9">{description}</Text>}
+      {price && <Price className="lg:mt-9" value={price} discount={discount} />}
     </article>
   );
 }
