@@ -2,7 +2,7 @@ import { ImageBtn } from "./../common/Buttons";
 
 function ImageThumbnails({ onSelect, selected, imageSet, className, ...props }) {
   return (
-    <ui {...props} className={"list-none " + className}>
+    <ul {...props} className={"list-none " + className}>
       {imageSet.map((image) => (
         <li key={image._id}>
           <ImageBtn
@@ -13,7 +13,7 @@ function ImageThumbnails({ onSelect, selected, imageSet, className, ...props }) 
           />
         </li>
       ))}
-    </ui>
+    </ul>
   );
 }
 
