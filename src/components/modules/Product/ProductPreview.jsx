@@ -5,7 +5,7 @@ import ImageThumbnails from "../ImageThumbnails";
 function ProductPreview({
   previewSet,
   DisplayPreview,
-  thumbnailsStyle,
+  thumbnailsStyle = "",
   chevronStyles,
   chevronSize = 16,
   chevronNextStyle = "",
@@ -45,7 +45,7 @@ function ProductPreview({
         imageSet={previewSet}
         onSelect={(img) => setCurrentImg(img)}
         selected={currentImg}
-        className={"lg:flex-center lg:gap-8 mt-9 hidden lg:flex " + thumbnailsStyle}
+        className={["lg:flex-center lg:gap-8 mt-9 hidden lg:flex", thumbnailsStyle]}
       />
     </section>
   );

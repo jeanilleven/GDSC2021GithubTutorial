@@ -1,12 +1,10 @@
 import Btn from "./Btn";
 
 function IconBtn({ Icon, className, ...props }) {
-  const baseStyles = "text-md font-bold";
-  const transitionStyles = "transition-all duration-250 ease-in-out";
+  const styles = ["text-md font-bold", "transition-all duration-250 ease-in-out", className];
 
-  const styles = `${baseStyles} ${transitionStyles}`;
   return (
-    <Btn {...props} className={styles + " " + className}>
+    <Btn {...props} className={styles.flat(Infinity).join(" ")}>
       {Icon}
     </Btn>
   );

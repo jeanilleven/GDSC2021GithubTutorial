@@ -1,9 +1,8 @@
 function FlexCenter({ className, children, col = false, ...props }) {
-  const baseStyles = "flex items-center";
-  const colStyle = col ? "flex-col" : "";
+  const styles = ["flex items-center", col && "flex-col", className];
 
   return (
-    <div {...props} className={baseStyles + " " + colStyle + " " + className}>
+    <div {...props} className={styles.flat(Infinity).join(" ")}>
       {children}
     </div>
   );
