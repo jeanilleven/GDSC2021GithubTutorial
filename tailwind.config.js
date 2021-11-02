@@ -41,7 +41,6 @@ module.exports = {
     extend: {
       scale: ["active"],
       cursor: ["disabled", "hover"],
-      filter: ["hover", "focus"],
       opacity: ["disabled"],
       translate: ["active"],
     },
