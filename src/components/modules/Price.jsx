@@ -1,11 +1,11 @@
 import Badge from "../common/Badge";
+import { FlexCenter } from "../common/Layouts";
 import PriceTag from "../common/PriceTag";
-import { FlexCenter } from "./../common/Layouts";
 
-function DisplayPrice({ price, discount, className, ...props }) {
+function Price({ value, discount, className, ...props }) {
   let discountedPrice, disPercentage;
   if (discount) {
-    discountedPrice = price * discount;
+    discountedPrice = value * discount;
     disPercentage = (discount * 100).toString() + "%";
   }
 
@@ -17,9 +17,9 @@ function DisplayPrice({ price, discount, className, ...props }) {
           <Badge text={disPercentage} />
         </FlexCenter>
       )}
-      <PriceTag price={price} crossedOut={discount} />
+      <PriceTag price={value} crossedOut={discount} />
     </FlexCenter>
   );
 }
 
-export default DisplayPrice;
+export default Price;
