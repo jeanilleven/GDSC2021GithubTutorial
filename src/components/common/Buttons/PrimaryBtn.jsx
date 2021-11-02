@@ -1,4 +1,4 @@
-function Button({ className, children, RightIcon, LeftIcon, ...props }) {
+function PrimaryBtn({ className, children, RightIcon, LeftIcon, ...props }) {
   const textStyles = "bg-primary-200 font-bold text-white";
   const containerStyles = "rounded-lg shadow-xl py-4 px-8";
   const flexStyles = "flex justify-center items-center";
@@ -16,4 +16,4 @@ function Button({ className, children, RightIcon, LeftIcon, ...props }) {
   );
 }
 
-export default Button;
+export default PrimaryBtn;

@@ -1,4 +1,4 @@
-function IconButton({ Icon, className, ...props }) {
+function IconBtn({ Icon, className, ...props }) {
   const textStyles = "text-primary-200 text-md font-bold";
   const stateStyles = "hover:opacity-70 disabled:opacity-50 active:translate-y-0.5 transform";
   const containerStyles = "rounded-lg py-4 px-6";
@@ -12,4 +12,4 @@ function IconButton({ Icon, className, ...props }) {
   );
 }
 
-export default IconButton;
+export default IconBtn;
