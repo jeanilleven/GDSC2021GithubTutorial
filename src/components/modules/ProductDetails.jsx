@@ -1,4 +1,4 @@
-import Text from "../common/Text";
+import { Text } from "../common";
 import { Header, SubHeader } from "./../common/Headers";
 import Price from "./Price";
 

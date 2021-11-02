@@ -1,6 +1,5 @@
-import Badge from "../common/Badge";
+import { Badge, PriceTag } from "../common";
 import { FlexCenter } from "../common/Layouts";
-import PriceTag from "../common/PriceTag";
 
 function Price({ value, discount, className, ...props }) {
   let discountedPrice, disPercentage;
