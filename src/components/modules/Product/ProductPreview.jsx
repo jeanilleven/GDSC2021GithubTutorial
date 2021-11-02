@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Chevrons from "./Chevrons";
-import ImageThumbnails from "./ImageThumbnails";
+import Chevrons from "../Chevrons";
+import ImageThumbnails from "../ImageThumbnails";
 
 function ProductPreview({
   previewSet,

@@ -1,7 +1,7 @@
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { PrimaryBtn } from "./../common/Buttons";
-import { FlexCenter } from "./../common/Layouts";
-import Counter from "./Counter";
+import { PrimaryBtn } from "../../common/Buttons";
+import { FlexCenter } from "../../common/Layouts";
+import Counter from "../Counter";
 
 function ProductOrder({ quantity, onIncrement, onDecrement, onOrder, ...props }) {
   return (

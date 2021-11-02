@@ -5,6 +5,7 @@ import Price from "../Price";
 function ProductDetails({ name, company, description, price, discount, ...props }) {
   return (
     <article {...props}>
+      {" "}
       {company && <SubHeader>{company}</SubHeader>}
       {name && <Header className="mt-3 lg:mt-4">{name}</Header>}
       {description && <Text className="mt-4 lg:mt-9">{description}</Text>}
