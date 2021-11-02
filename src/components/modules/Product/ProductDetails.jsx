@@ -1,6 +1,6 @@
-import { Text } from "../common";
-import { Header, SubHeader } from "./../common/Headers";
-import Price from "./Price";
+import { Text } from "../../common";
+import { Header, SubHeader } from "../../common/Headers";
+import Price from "../Price";
 
 function ProductDetails({ name, company, description, price, discount, ...props }) {
   return (
