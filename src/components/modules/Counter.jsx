@@ -3,7 +3,7 @@ import { IconBtn } from "../common/Buttons";
 import { FlexCenter } from "../common/Layouts";
 
 function Counter({ className, count, onIncrement, onDecrement, ...props }) {
-  const iconStyles = "text-primary-200 p-4 rounded-lg";
+  const iconStyles = "text-primary-200 p-4 rounded-lg active:scale-125 transform";
 
   return (
     <FlexCenter {...props} className={"py-1 justify-between bg-neutral-100 rounded-md " + className}>
