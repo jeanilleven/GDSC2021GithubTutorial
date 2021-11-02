@@ -36,7 +36,7 @@ module.exports = {
   },
   variants: {
     extend: {
-      cursor: ["disabled"],
+      cursor: ["disabled", "hover"],
       filter: ["hover", "focus"],
       opacity: ["disabled"],
       translate: ["active"],
