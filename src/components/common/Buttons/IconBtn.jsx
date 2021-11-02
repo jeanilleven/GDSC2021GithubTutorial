@@ -1,14 +1,16 @@
+import Btn from "./Btn";
+
 function IconBtn({ Icon, className, ...props }) {
   const textStyles = "text-primary-200 text-md font-bold";
-  const stateStyles = "hover:opacity-70 disabled:opacity-50 active:translate-y-0.5 transform";
+  const activeStyles = "active:translate-y-0.5 transform";
   const containerStyles = "rounded-lg py-4 px-6";
   const transitionStyles = "transition-all duration-250 ease-in-out";
 
-  const styles = `${stateStyles} ${textStyles} ${containerStyles} ${transitionStyles}`;
+  const styles = `${activeStyles} ${textStyles} ${containerStyles} ${transitionStyles}`;
   return (
-    <button {...props} className={styles + " " + className}>
+    <Btn {...props} className={styles + " " + className}>
       {Icon}
-    </button>
+    </Btn>
   );
 }
 
