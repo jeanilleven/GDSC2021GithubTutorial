@@ -8,6 +8,9 @@ module.exports = {
       lg: "1024px",
     },
     extend: {
+      outline: {
+        orange: "2px solid hsl(26, 100%, 55%)",
+      },
       fontWeight: {
         normal: 400,
         bold: 700,
