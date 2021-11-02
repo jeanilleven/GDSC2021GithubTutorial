@@ -1,7 +1,7 @@
 import Btn from "./Btn";
 
-function IconBtn({ Icon, className, iconColor = "primary-200", bgColor = "transparent", ...props }) {
-  const baseStyles = `bg-${bgColor} text-${iconColor} text-md font-bold`;
+function IconBtn({ Icon, className, ...props }) {
+  const baseStyles = "text-md font-bold active:scale-110 transform";
   const transitionStyles = "transition-all duration-250 ease-in-out";
 
   const styles = `${baseStyles} ${transitionStyles}`;
