@@ -10,6 +10,7 @@ function ImageThumbnails({ onSelect, selected, imageSet, className, ...props }) 
             src={image.thumbnailUrl}
             onClick={() => onSelect(image)}
             isSelected={image._id === selected._id}
+            className="rounded-lg"
           />
         </li>
       ))}
