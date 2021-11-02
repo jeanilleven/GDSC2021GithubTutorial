@@ -3,7 +3,7 @@ import { PrimaryBtn } from "./../common/Buttons";
 import { FlexCenter } from "./../common/Layouts";
 import Counter from "./Counter";
 
-function ProductOrder({ quantity, onIncrement, onDecrement, ...props }) {
+function ProductOrder({ quantity, onIncrement, onDecrement, onOrder, ...props }) {
   return (
     <FlexCenter {...props}>
       <Counter
@@ -15,6 +15,7 @@ function ProductOrder({ quantity, onIncrement, onDecrement, ...props }) {
       <PrimaryBtn
         name="Add To Cart"
         className="mt-4 w-full lg:mt-0"
+        onClick={onOrder}
         LeftIcon={<AiOutlineShoppingCart className="mr-2" size={20} />}
       >
         Add to Cart
