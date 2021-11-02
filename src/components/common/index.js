@@ -1,4 +1,5 @@
-export { default as Badge, default as LightBox } from "./Badge";
+export { default as Badge } from "./Badge";
 export { default as Image } from "./Image";
+export { default as LightBox } from "./LightBox";
 export { default as PriceTag } from "./PriceTag";
 export { default as Text } from "./Text";

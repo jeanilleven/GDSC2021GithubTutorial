@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { ImCross } from "react-icons/im";
+import { Image, LightBox } from "../common";
 import { IconBtn, ImageBtn } from "../common/Buttons";
-import Image from "../common/Image";
-import LightBox from "../common/LightBox";
 import { ProductDetails, ProductOrder, ProductPreview } from "../modules/Product";
 
 function ProductPage({
