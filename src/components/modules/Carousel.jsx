@@ -1,11 +1,13 @@
+import ListItem from "./../common/ListItem";
 import Chevrons from "./Chevrons";
-import ImageThumbnails from "./ImageThumbnails";
 
 function Carousel({
   items,
   selected,
   onSelect,
   Display,
+  Thumbnail,
+  keyExtractor,
   chevronStyles,
   thumbnailsStyle,
   chevronSize = 16,
@@ -40,12 +42,14 @@ function Carousel({
         />
         {Display(selected)}
       </div>
-      <ImageThumbnails
-        imageSet={items}
-        onSelect={onSelect}
-        selected={selected}
-        className={["lg:flex-center lg:gap-8 mt-9 hidden lg:flex", thumbnailsStyle]}
-      />
+      {Thumbnail && (
+        <ListItem
+          items={items}
+          keyExtractor={keyExtractor}
+          className={["lg:flex-center lg:gap-8 mt-9 hidden lg:flex", thumbnailsStyle]}
+          ListComponent={Thumbnail}
+        />
+      )}
     </section>
   );
 }

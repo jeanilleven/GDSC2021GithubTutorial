@@ -27,6 +27,16 @@ function ProductPage({ product, quantity, onOrder, onIncrement, onDecrement }) {
               className="rounded-none cursor-default hover:opacity-100 lg:cursor-pointer lg:rounded-2xl"
             />
           )}
+          keyExtractor={(img) => img._id}
+          Thumbnail={(img) => (
+            <ImageBtn
+              name={img.alt}
+              src={img.thumbnailUrl}
+              onClick={() => setCurrentImg(img)}
+              isSelected={img._id === currentImg._id}
+              className="rounded-lg"
+            />
+          )}
         />
         <section className="font-display py-4 px-2 m-auto w-11/12 lg:p-0 lg:mt-14 lg:ml-4 lg:w-full">
           <ProductDetails
@@ -63,6 +73,16 @@ function ProductPage({ product, quantity, onOrder, onIncrement, onDecrement }) {
             chevronPrevStyle="-translate-x-1/2"
             thumbnailsStyle="px-10"
             Display={(img) => <Image src={img.imageUrl} alt={img.name} className="rounded-xl" />}
+            keyExtractor={(img) => img._id}
+            Thumbnail={(img) => (
+              <ImageBtn
+                name={img.alt}
+                src={img.thumbnailUrl}
+                onClick={() => setCurrentImg(img)}
+                isSelected={img._id === currentImg._id}
+                className="rounded-lg"
+              />
+            )}
           />
         </div>
       </LightBox>
