@@ -4,19 +4,9 @@ import { Image, LightBox } from "../common";
 import { IconBtn, ImageBtn } from "../common/Buttons";
 import { ProductDetails, ProductOrder, ProductPreview } from "../modules/Product";
 
-function ProductPage({
-  name,
-  company,
-  description,
-  price,
-  discount,
-  quantity,
-  onOrder,
-  onIncrement,
-  onDecrement,
-  images,
-}) {
+function ProductPage({ product, quantity, onOrder, onIncrement, onDecrement }) {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const { name, company, description, price, discount, images } = product;
 
   return (
     <>
