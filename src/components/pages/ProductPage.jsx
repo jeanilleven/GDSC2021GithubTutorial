@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Image, LightBox } from "../common";
-import { CloseBtn, ImageBtn } from "../common/Buttons";
-import { ProductCarousel, ProductDetails, ProductOrder } from "../modules/Product";
+import { ImageBtn } from "../common/Buttons";
+import { ProductCarousel, ProductDetails, ProductLightbox, ProductOrder } from "../modules/Product";
 
 function ProductPage({ product, quantity, onOrder, onIncrement, onDecrement }) {
   const { name, company, description, price, discount, images } = product;
@@ -44,26 +43,13 @@ function ProductPage({ product, quantity, onOrder, onIncrement, onDecrement }) {
           />
         </section>
       </main>
-      <LightBox isOpen={isLightboxOpen} className="hidden lg:block">
-        <div className="flex items-end flex-col w-1/3 px-6 pt-20 m-auto">
-          <CloseBtn
-            onClose={() => setIsLightboxOpen((toggle) => !toggle)}
-            className="p-2 mb-4 -mr-1.5"
-            size={22}
-          />
-          <ProductCarousel
-            images={images}
-            selected={currentImg}
-            onSelect={setCurrentImg}
-            chevronSize={22}
-            chevronStyles="p-4 active:scale-110 transform"
-            chevronNextStyle="translate-x-1/2"
-            chevronPrevStyle="-translate-x-1/2"
-            thumbnailsStyle="px-10"
-            Display={(img) => <Image src={img.imageUrl} alt={img.name} className="rounded-xl" />}
-          />
-        </div>
-      </LightBox>
+      <ProductLightbox
+        isOpen={isLightboxOpen}
+        onClose={() => setIsLightboxOpen((toggle) => !toggle)}
+        images={images}
+        selected={currentImg}
+        onSelect={setCurrentImg}
+      />
     </>
   );
 }
