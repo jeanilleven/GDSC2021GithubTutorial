@@ -11,7 +11,7 @@ function ProductPage({ product }) {
         product={product}
         image={currentImg}
         onImageSelect={setCurrentImg}
-        onImageClick={() => setIsLightboxOpen((v) => !v)}
+        onImageClick={() => setIsLightboxOpen(true)}
         quantity={0}
         // onOrder
         // onIncrement
@@ -19,7 +19,7 @@ function ProductPage({ product }) {
       />
       <ProductLightbox
         isOpen={isLightboxOpen}
-        onClose={() => setIsLightboxOpen((v) => !v)}
+        onClose={() => setIsLightboxOpen(false)}
         images={product.images}
         selected={currentImg}
         onSelect={setCurrentImg}
