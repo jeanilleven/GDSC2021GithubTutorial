@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { ImCross } from "react-icons/im";
 import { Image, LightBox } from "../common";
-import { IconBtn, ImageBtn } from "../common/Buttons";
+import { CloseBtn, ImageBtn } from "../common/Buttons";
 import { ProductCarousel, ProductDetails, ProductOrder } from "../modules/Product";
 
 function ProductPage({ product, quantity, onOrder, onIncrement, onDecrement }) {
@@ -47,10 +46,10 @@ function ProductPage({ product, quantity, onOrder, onIncrement, onDecrement }) {
       </main>
       <LightBox isOpen={isLightboxOpen} className="hidden lg:block">
         <div className="flex items-end flex-col w-1/3 px-6 pt-20 m-auto">
-          <IconBtn
-            Icon={<ImCross size={22} />}
-            onClick={() => setIsLightboxOpen((toggle) => !toggle)}
-            className="text-primary-200 p-2 mb-4 -mr-1.5"
+          <CloseBtn
+            onClose={() => setIsLightboxOpen((toggle) => !toggle)}
+            className="p-2 mb-4 -mr-1.5"
+            size={22}
           />
           <ProductCarousel
             images={images}
