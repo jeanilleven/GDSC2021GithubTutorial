@@ -1,10 +1,10 @@
-import { Image, LightBox } from "../../common";
+import { Image, Lightbox } from "../../common";
 import { CloseBtn } from "../../common/Buttons";
 import ProductCarousel from "./ProductCarousel";
 
 function ProductLightbox({ onClose, images, selected, onSelect, ...props }) {
   return (
-    <LightBox {...props} className="hidden lg:block">
+    <Lightbox {...props} className="hidden lg:block">
       <div className="flex items-end flex-col w-1/3 px-6 pt-20 m-auto">
         <CloseBtn onClose={onClose} className="p-2 mb-4 -mr-1.5" size={22} />
         <ProductCarousel
@@ -19,7 +19,7 @@ function ProductLightbox({ onClose, images, selected, onSelect, ...props }) {
           Display={(img) => <Image src={img.imageUrl} alt={img.name} className="rounded-xl" />}
         />
       </div>
-    </LightBox>
+    </Lightbox>
   );
 }
 
