@@ -2,8 +2,7 @@ import { useState } from "react";
 import { ImCross } from "react-icons/im";
 import { Image, LightBox } from "../common";
 import { IconBtn, ImageBtn } from "../common/Buttons";
-import { ProductDetails, ProductOrder } from "../modules/Product";
-import { Carousel } from "../modules";
+import { ProductCarousel, ProductDetails, ProductOrder } from "../modules/Product";
 
 function ProductPage({ product, quantity, onOrder, onIncrement, onDecrement }) {
   const { name, company, description, price, discount, images } = product;
@@ -13,8 +12,8 @@ function ProductPage({ product, quantity, onOrder, onIncrement, onDecrement }) {
   return (
     <>
       <main className="flex flex-col lg:flex-row max-w-screen-lg m-auto lg:pt-32">
-        <Carousel
-          items={images}
+        <ProductCarousel
+          images={images}
           selected={currentImg}
           onSelect={setCurrentImg}
           className="lg:mr-28"
@@ -25,16 +24,6 @@ function ProductPage({ product, quantity, onOrder, onIncrement, onDecrement }) {
               alt={img.name}
               onClick={() => setIsLightboxOpen((toggle) => !toggle)}
               className="rounded-none cursor-default hover:opacity-100 lg:cursor-pointer lg:rounded-2xl"
-            />
-          )}
-          keyExtractor={(img) => img._id}
-          Thumbnail={(img) => (
-            <ImageBtn
-              name={img.alt}
-              src={img.thumbnailUrl}
-              onClick={() => setCurrentImg(img)}
-              isSelected={img._id === currentImg._id}
-              className="rounded-lg"
             />
           )}
         />
@@ -63,8 +52,8 @@ function ProductPage({ product, quantity, onOrder, onIncrement, onDecrement }) {
             onClick={() => setIsLightboxOpen((toggle) => !toggle)}
             className="text-primary-200 p-2 mb-4 -mr-1.5"
           />
-          <Carousel
-            items={images}
+          <ProductCarousel
+            images={images}
             selected={currentImg}
             onSelect={setCurrentImg}
             chevronSize={22}
@@ -73,16 +62,6 @@ function ProductPage({ product, quantity, onOrder, onIncrement, onDecrement }) {
             chevronPrevStyle="-translate-x-1/2"
             thumbnailsStyle="px-10"
             Display={(img) => <Image src={img.imageUrl} alt={img.name} className="rounded-xl" />}
-            keyExtractor={(img) => img._id}
-            Thumbnail={(img) => (
-              <ImageBtn
-                name={img.alt}
-                src={img.thumbnailUrl}
-                onClick={() => setCurrentImg(img)}
-                isSelected={img._id === currentImg._id}
-                className="rounded-lg"
-              />
-            )}
           />
         </div>
       </LightBox>
