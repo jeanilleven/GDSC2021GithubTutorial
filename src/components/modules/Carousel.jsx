@@ -16,14 +16,14 @@ function Carousel({
   ...props
 }) {
   function handleNext() {
-    const idx = items.indexOf(items);
+    const idx = items.indexOf(selected);
     const item = items[idx === items.length - 1 ? 0 : idx + 1];
 
     onSelect(item);
   }
 
   function handlePrev() {
-    const idx = items.indexOf(items);
+    const idx = items.indexOf(selected);
     const item = items[idx === 0 ? items.length - 1 : idx - 1];
 
     onSelect(item);
