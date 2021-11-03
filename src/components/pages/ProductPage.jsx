@@ -2,20 +2,24 @@ import { useState } from "react";
 import { ImCross } from "react-icons/im";
 import { Image, LightBox } from "../common";
 import { IconBtn, ImageBtn } from "../common/Buttons";
-import { ProductDetails, ProductOrder, ProductPreview } from "../modules/Product";
+import { ProductDetails, ProductOrder } from "../modules/Product";
+import Carousel from "./../modules/Carousel";
 
 function ProductPage({ product, quantity, onOrder, onIncrement, onDecrement }) {
-  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const { name, company, description, price, discount, images } = product;
+  const [currentImg, setCurrentImg] = useState(images[0]);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   return (
     <>
       <main className="flex flex-col lg:flex-row max-w-screen-lg m-auto lg:pt-32">
-        <ProductPreview
-          previewSet={images}
+        <Carousel
+          items={images}
+          selected={currentImg}
+          onSelect={setCurrentImg}
           className="lg:mr-28"
           chevronStyles="p-3 mx-4 lg:hidden active:scale-125 transform"
-          DisplayPreview={(img) => (
+          Display={(img) => (
             <ImageBtn
               src={img.imageUrl}
               alt={img.name}
@@ -49,14 +53,16 @@ function ProductPage({ product, quantity, onOrder, onIncrement, onDecrement }) {
             onClick={() => setIsLightboxOpen((toggle) => !toggle)}
             className="text-primary-200 p-2 mb-4 -mr-1.5"
           />
-          <ProductPreview
-            previewSet={images}
+          <Carousel
+            items={images}
+            selected={currentImg}
+            onSelect={setCurrentImg}
             chevronSize={22}
             chevronStyles="p-4 active:scale-110 transform"
             chevronNextStyle="translate-x-1/2"
             chevronPrevStyle="-translate-x-1/2"
             thumbnailsStyle="px-10"
-            DisplayPreview={(img) => <Image src={img.imageUrl} alt={img.name} className="rounded-xl" />}
+            Display={(img) => <Image src={img.imageUrl} alt={img.name} className="rounded-xl" />}
           />
         </div>
       </LightBox>
