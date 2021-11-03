@@ -3,7 +3,7 @@ import { ImCross } from "react-icons/im";
 import { Image, LightBox } from "../common";
 import { IconBtn, ImageBtn } from "../common/Buttons";
 import { ProductDetails, ProductOrder } from "../modules/Product";
-import Carousel from "./../modules/Carousel";
+import { Carousel } from "../modules";
 
 function ProductPage({ product, quantity, onOrder, onIncrement, onDecrement }) {
   const { name, company, description, price, discount, images } = product;

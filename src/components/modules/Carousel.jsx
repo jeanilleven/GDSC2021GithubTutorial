@@ -1,4 +1,4 @@
-import ListItem from "./../common/ListItem";
+import { ListItem } from "./../common";
 import Chevrons from "./Chevrons";
 
 function Carousel({
