@@ -1,4 +1,4 @@
-import { ListItem } from "../../common";
+import { ListItem, Text } from "../../common";
 import { PrimaryBtn } from "../../common/Buttons";
 import CartItem from "./CartItem";
 
@@ -10,9 +10,7 @@ function CartPopup({ items, onItemDelete, className, ...props }) {
       <h3 className="font-display font-bold text-neutral-400 ml-6">Cart</h3>
       <section className="border-t-2 border-neutral-100 w-full mt-5 px-6">
         {items.length === 0 ? (
-          <p className="text-center font-bold text-base my-20 mx-20 text-neutral-400">
-            Your cart is empty.
-          </p>
+          <Text className="text-center font-bold my-20 mx-20">Your cart is empty.</Text>
         ) : (
           <>
             <ListItem
