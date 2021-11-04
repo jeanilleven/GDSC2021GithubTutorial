@@ -4,7 +4,7 @@ function PrimaryBtn({ className, children, RightIcon, LeftIcon, ...props }) {
   const styles = [
     "bg-primary-200",
     "font-bold text-white",
-    "rounded-lg shadow-orange py-4 px-8",
+    "rounded-lg py-4 px-8",
     "flex justify-center items-center",
     "active:translate-y-0.5 transform",
     "transition-all duration-250 ease-in-out",
