@@ -14,7 +14,7 @@ function ProductSection({
   const { name, company, description, price, discount, images } = product;
 
   return (
-    <section className="flex flex-col lg:flex-row max-w-screen-lg m-auto lg:pt-32">
+    <section className="flex flex-col lg:flex-row max-w-screen-lg m-auto lg:px-8 lg:pt-32">
       <ProductCarousel
         images={images}
         selected={image}
