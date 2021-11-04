@@ -1,16 +1,20 @@
-import './App.css';
 import Navbar from './Navbar/Navbar';
 import { BrowserRouter } from 'react-router-dom';
+import ProductPage from "./components/pages/ProductPage";
+import { getProduct } from "./services/productService";
+
+const product = getProduct();
+
 function App() {
+
   return (
     <div className="App">
       <BrowserRouter>
         <Navbar />
       </BrowserRouter>
-      
-      <h1>Another Text Here</h1>
+      <ProductPage product={product} />;
     </div>
   );
-}
 
+}
 export default App;
