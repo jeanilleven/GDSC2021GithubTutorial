@@ -3,7 +3,7 @@ import { PrimaryBtn } from "../../common/Buttons";
 import CartItem from "./CartItem";
 
 function CartPopup({ items, onItemDelete, className, ...props }) {
-  const styles = ["rounded-lg shadow-xl py-5 bg-white", className];
+  const styles = ["rounded-lg shadow-xl py-5 bg-white min-w-max", className];
 
   return (
     <section {...props} className={styles.flat(Infinity).join(" ")}>
