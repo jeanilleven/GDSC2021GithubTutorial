@@ -1,11 +1,10 @@
-import './App.css';
+import ProductPage from "./components/pages/ProductPage";
+import { getProduct } from "./services/productService";
+
+const product = getProduct();
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Another Text Here</h1>
-    </div>
-  );
+  return <ProductPage product={product} />;
 }
 
 export default App;
