@@ -33,7 +33,7 @@ function CartItem({
         name="Delete"
         Icon={<FaTrashAlt size={16} />}
         onClick={onDelete}
-        className="text-neutral-200 ml-4 active:scale-110 transform"
+        className="text-neutral-200 ml-auto md:ml-4 active:scale-110 transform"
       />
     </section>
   );
