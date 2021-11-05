@@ -20,7 +20,7 @@ function ProductSection({
         selected={image}
         onSelect={onImageSelect}
         className="lg:mr-28"
-        chevronStyles="p-3 mx-4 lg:hidden active:scale-125 transform"
+        chevronStyle="p-3 mx-4 lg:hidden active:scale-125 transform"
         Display={(img) => (
           <ImageBtn
             src={img.imageUrl}
