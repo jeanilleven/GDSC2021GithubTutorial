@@ -10,7 +10,7 @@ function CartPopup({ items, onItemDelete, className = "", ...props }) {
       <h3 className="font-display font-bold text-neutral-400 ml-6">Cart</h3>
       <section className="border-t-2 border-neutral-100 w-full mt-5 px-6">
         {items.length === 0 ? (
-          <Text className="text-center font-bold my-20 mx-20">Your cart is empty.</Text>
+          <Text className="text-center font-bold my-20 mx-auto md:mx-20">Your cart is empty.</Text>
         ) : (
           <>
             <CartList items={items} onItemDelete={onItemDelete} />
