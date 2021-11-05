@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Sneakers",
+  "name": "Sneakers | Best Marketplace for Your Shoe Needs",
+  "description": "The best marketplace to buy quality, trendy, and affordable shoes.",
   "icons": [
     {
       "src": "favicon.ico",
