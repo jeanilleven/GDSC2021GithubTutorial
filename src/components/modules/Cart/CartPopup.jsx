@@ -2,7 +2,7 @@ import { Text } from "../../common";
 import { PrimaryBtn } from "../../common/Buttons";
 import CartList from "./CartList";
 
-function CartPopup({ items, onItemDelete, className, ...props }) {
+function CartPopup({ items, onItemDelete, className = "", ...props }) {
   const styles = ["rounded-lg shadow-xl py-5 bg-white min-w-max", className];
 
   return (

@@ -2,7 +2,17 @@ import { FaTrashAlt } from "react-icons/fa";
 import { Image, PriceTag } from "../../common";
 import { IconBtn } from "../../common/Buttons";
 
-function CartItem({ image, imageAlt, price, discount, quantity, name, className, onDelete, ...props }) {
+function CartItem({
+  image,
+  imageAlt,
+  price,
+  discount,
+  quantity,
+  name,
+  onDelete,
+  className = "",
+  ...props
+}) {
   const sellingPrice = price * (discount || 1);
   const totalPrice = quantity * sellingPrice;
   const styles = ["flex", className];

@@ -1,6 +1,6 @@
 import Btn from "./Btn";
 
-function PrimaryBtn({ className, children, RightIcon, LeftIcon, ...props }) {
+function PrimaryBtn({ children, RightIcon, LeftIcon, className = "", ...props }) {
   const styles = [
     "bg-primary-200",
     "font-bold text-white",

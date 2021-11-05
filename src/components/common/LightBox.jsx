@@ -1,4 +1,4 @@
-function Lightbox({ children, className, isOpen, ...props }) {
+function Lightbox({ children, className = "", isOpen, ...props }) {
   const openStyle = "overflow-auto top-0 bottom-0 opacity-100";
   const closeStyle = "overflow-hidden -top-full opacity-0";
   const styles = [

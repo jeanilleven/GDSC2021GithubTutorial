@@ -1,4 +1,4 @@
-function Text({ children, className, ...props }) {
+function Text({ children, className = "", ...props }) {
   const styles = ["text-neutral-300 leading-6", className];
 
   return (

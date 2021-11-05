@@ -1,7 +1,7 @@
 import { Badge, PriceTag } from "../common";
 import { FlexCenter } from "../common/Layouts";
 
-function Price({ value, discount, className, ...props }) {
+function Price({ value, discount, className = "", ...props }) {
   const discountedPrice = discount ? value * discount : 0;
   const disPercentage = discount ? (discount * 100).toString() + "%" : 0;
 

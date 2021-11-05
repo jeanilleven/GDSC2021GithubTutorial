@@ -1,4 +1,4 @@
-function ListItem({ items, keyExtractor, ListComponent, className, ...props }) {
+function ListItem({ items, keyExtractor, ListComponent, className = "", ...props }) {
   const styles = ["list-none", className];
 
   return (

@@ -1,7 +1,7 @@
 import Image from "../Image";
 import Btn from "./Btn";
 
-function ImageBtn({ name, className, src, isSelected = false, ...props }) {
+function ImageBtn({ name, src, className = "", isSelected = false, ...props }) {
   const styles = [
     "overflow-hidden",
     isSelected && "outline-orange hover:opacity-100 hover:cursor-default",
