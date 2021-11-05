@@ -22,7 +22,7 @@ function CartItem({
       <div className="overflow-hidden w-12 rounded-md">
         <Image alt={imageAlt} src={image} />
       </div>
-      <div className="flex flex-col ml-4 font-display text-neutral-300">
+      <div className="flex flex-col mx-4 font-display text-neutral-300">
         <h6>{name}</h6>
         <p>
           <PriceTag value={sellingPrice} /> x {quantity}{" "}
@@ -33,7 +33,7 @@ function CartItem({
         name="Delete"
         Icon={<FaTrashAlt size={16} />}
         onClick={onDelete}
-        className="text-neutral-200 ml-auto md:ml-4 active:scale-110 transform"
+        className="text-neutral-200 ml-auto active:scale-110 transform"
       />
     </section>
   );
