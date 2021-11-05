@@ -1,6 +1,6 @@
-import { ListItem, Text } from "../../common";
+import { Text } from "../../common";
 import { PrimaryBtn } from "../../common/Buttons";
-import CartItem from "./CartItem";
+import CartList from "./CartList";
 
 function CartPopup({ items, onItemDelete, className, ...props }) {
   const styles = ["rounded-lg shadow-xl py-5 bg-white min-w-max", className];
@@ -13,22 +13,7 @@ function CartPopup({ items, onItemDelete, className, ...props }) {
           <Text className="text-center font-bold my-20 mx-20">Your cart is empty.</Text>
         ) : (
           <>
-            <ListItem
-              items={items}
-              keyExtractor={(item) => item._id}
-              ListComponent={({ images, discount, price, name, orderQuantity }) => (
-                <CartItem
-                  className="mt-6"
-                  name={name}
-                  image={images[0].thumbnailUrl}
-                  imageAlt={images[0].name}
-                  quantity={orderQuantity}
-                  price={price}
-                  discount={discount}
-                  onDelete={onItemDelete}
-                />
-              )}
-            />
+            <CartList items={items} onItemDelete={onItemDelete} />
             <PrimaryBtn name="Checkout" className="w-full mt-6 mb-2">
               Checkout
             </PrimaryBtn>
