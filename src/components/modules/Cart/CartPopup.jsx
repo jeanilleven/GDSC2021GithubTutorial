@@ -2,7 +2,7 @@ import { Text } from "../../common";
 import { PrimaryBtn } from "../../common/Buttons";
 import CartList from "./CartList";
 
-function CartPopup({ items, onItemDelete, className = "", ...props }) {
+function CartPopup({ items, onItemDelete, onCheckOut, className = "", ...props }) {
   const styles = ["rounded-lg shadow-xl py-5 bg-white min-w-max", className];
 
   return (
@@ -14,7 +14,7 @@ function CartPopup({ items, onItemDelete, className = "", ...props }) {
         ) : (
           <>
             <CartList items={items} onItemDelete={onItemDelete} />
-            <PrimaryBtn name="Checkout" className="w-full mt-6 mb-2">
+            <PrimaryBtn name="Checkout" onClick={onCheckOut} className="w-full mt-6 mb-2">
               Checkout
             </PrimaryBtn>
           </>
