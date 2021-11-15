@@ -1,7 +1,7 @@
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IconBtn } from "../common/Buttons";
 
-function Chevrons({ onNext, onPrev, className, nextStyle, prevStyle, size = 16 }) {
+function Chevrons({ onNext, onPrev, className = "", nextStyle = "", prevStyle = "", size = 16 }) {
   const stateStyles = "hover:opacity-100 hover:text-primary-200";
   const positionStyles = "absolute top-1/2 -translate-y-1/2";
   const baseStyles = "bg-neutral-100 text-neutral-400 rounded-full";

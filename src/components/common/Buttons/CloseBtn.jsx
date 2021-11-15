@@ -1,7 +1,7 @@
 import { ImCross } from "react-icons/im";
 import IconBtn from "./IconBtn";
 
-function CloseBtn({ onClose, size, className, ...props }) {
+function CloseBtn({ onClose, size, className = "", ...props }) {
   return (
     <IconBtn
       {...props}

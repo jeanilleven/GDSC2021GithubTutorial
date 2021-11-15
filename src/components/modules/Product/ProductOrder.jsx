@@ -14,7 +14,7 @@ function ProductOrder({ quantity, onIncrement, onDecrement, onOrder, ...props })
       />
       <PrimaryBtn
         name="Add To Cart"
-        className="mt-4 w-full lg:mt-0"
+        className="mt-4 w-full lg:mt-0 shadow-orange"
         onClick={onOrder}
         LeftIcon={<AiOutlineShoppingCart className="mr-2" size={20} />}
       >

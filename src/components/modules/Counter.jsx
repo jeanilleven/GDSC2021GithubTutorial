@@ -2,7 +2,7 @@ import { FaMinus, FaPlus } from "react-icons/fa";
 import { IconBtn } from "../common/Buttons";
 import { FlexCenter } from "../common/Layouts";
 
-function Counter({ className, count, onIncrement, onDecrement, ...props }) {
+function Counter({ count, onIncrement, onDecrement, className = "", ...props }) {
   const iconStyles = "text-primary-200 p-4 rounded-lg active:scale-125 transform";
 
   return (

@@ -12,7 +12,7 @@ function ProductLightbox({ onClose, images, selected, onSelect, ...props }) {
           selected={selected}
           onSelect={onSelect}
           chevronSize={22}
-          chevronStyles="p-4 active:scale-110 transform"
+          chevronStyle="p-4 active:scale-110 transform"
           chevronNextStyle="translate-x-1/2"
           chevronPrevStyle="-translate-x-1/2"
           thumbnailsStyle="px-10"

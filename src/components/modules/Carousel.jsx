@@ -8,8 +8,8 @@ function Carousel({
   Display,
   Thumbnail,
   keyExtractor,
-  chevronStyles,
-  thumbnailsStyle,
+  thumbnailsStyle = "",
+  chevronStyle = "",
   chevronSize = 16,
   chevronNextStyle = "",
   chevronPrevStyle = "",
@@ -36,7 +36,7 @@ function Carousel({
           size={chevronSize}
           onNext={handleNext}
           onPrev={handlePrev}
-          className={chevronStyles}
+          className={chevronStyle}
           nextStyle={chevronNextStyle}
           prevStyle={chevronPrevStyle}
         />

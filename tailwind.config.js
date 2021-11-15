@@ -7,10 +7,10 @@ module.exports = {
       md: "765px",
       lg: "1024px",
     },
-    boxShadow: {
-      orange: "1px 20px 40px -2px hsla(26, 100%, 55%, 0.5)",
-    },
     extend: {
+      boxShadow: {
+        orange: "1px 20px 40px -2px hsla(26, 100%, 55%, 0.5)",
+      },
       outline: {
         orange: "2px solid hsl(26, 100%, 55%)",
       },
