@@ -34,17 +34,21 @@ export const NavLink = styled(Link)`
 `
 
 export const Cart = styled(BsCart3)`
-    display: flex;
+    position: relative;
     align-items: center;
-    padding: 2rem;
+    margin-right: 12px;
     height: 100%;
-    font-size: 1.5rem;
+    font-size: 128px;
     cursor: pointer;
+    @media screen and (max-width: 768px) {
+      margin-right: 4px;
+      font-size: 64px;
+    }
   
 `
 export const NavDiv = styled.div`
     display: flex;
-    //align-items: center;
+    align-items: center;
 `
 export const NavMenu = styled(NavDiv)`
   margin-right: -24px;
@@ -70,18 +74,13 @@ export const NavMenu = styled(NavDiv)`
       transform: translateX(0);
       box-shadow: -0.125rem 0 1.25rem 0 #343851;
     `: ``};
-    /* flex-direction: column;
-    position: absolute;
-    background-color: white;
     
-    align-items: flex-start;
-    width: 50%;
-    height: 100vh; */
   }
   
   
 `
 export const NavBtn = styled(NavDiv)`
+  display: flex;
   align-items: center;
   padding: 1em;
   justify-content: flex-start;
